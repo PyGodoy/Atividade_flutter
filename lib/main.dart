@@ -1,4 +1,8 @@
+import 'package:designsystemsampleapp/DesignSystem/Components/BottomTabBar/bottom_tab_bar.dart';
+import 'package:designsystemsampleapp/DesignSystem/Components/BottomTabBar/bottom_tab_bar_view_model.dart';
+import 'package:designsystemsampleapp/profile.dart';
 import 'package:designsystemsampleapp/singup.dart';
+import 'package:designsystemsampleapp/login.dart';
 import 'package:flutter/material.dart';
 import '../DesignSystem/Samples/actionButtonSampleScreen/action_button_sample_screen.dart';
 import '../DesignSystem/Samples/bottomTabBarSampleScreen/bottom_tab_bar_sample_screen.dart';
@@ -15,13 +19,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Crie o BottomTabBarViewModel com os 4 itens
+    final bottomTabBarViewModel = BottomTabBarViewModel(
+      bottomTabs: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),         // Ícone de casa
+        BottomNavigationBarItem(icon: Icon(Icons.message), label: "Messages"),  // Ícone de mensagem
+        BottomNavigationBarItem(icon: Icon(Icons.label), label: "Label"),       // Ícone de etiqueta (label)
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),    // Ícone de perfil
+      ],
+      onIndexChanged: (index) {
+        // Lógica para lidar com a mudança de índice
+      },
+    );
+
+    // Defina o currentIndex, por exemplo, 3 para o perfil
+    final currentIndex = 3;
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LinkedLabelPage(),
+      home: LoginScreen(
+      ),
     );
   }
 }

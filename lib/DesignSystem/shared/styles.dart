@@ -92,7 +92,6 @@ const TextStyle label2Regular = TextStyle(
 const TextStyle label2Semibold = TextStyle(
   fontFamily: 'Inter',
   fontSize: 10,
-  height: 16,
   fontWeight: FontWeight.w600,
   color: normalPrimaryBaseColorLight,
 );
