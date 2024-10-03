@@ -126,6 +126,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
             ),
+            
             SizedBox(height: 100),
 
             // Texto "Already Have An Account?"
@@ -145,7 +146,7 @@ class _SignupScreenState extends State<SignupScreen> {
             // Botão grande de Login em amarelo
             ActionButton.instantiate(
               viewModel: ActionButtonViewModel(
-                size: ActionButtonSize.large,
+                size: ActionButtonSize.medium,
                 style: ActionButtonStyle.primary, // Estilo amarelo
                 text: 'Login',
                 onPressed: () {

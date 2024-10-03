@@ -55,23 +55,32 @@ class ActionButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: buttonColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        textStyle: buttonTextStyle,
         padding: EdgeInsets.symmetric(
           vertical: verticalPadding,
-          horizontal: horizontalPadding
-        )
+          horizontal: horizontalPadding,
+        ),
       ),
-      child: viewModel.icon !=null ?
-      Row(
-        children: [
-          Icon(
-            viewModel.icon,
-            size: iconSize,
-          ),
-          Text(viewModel.text)
-        ],
-      ) :
-      Text(viewModel.text),
+      child: viewModel.icon != null
+          ? Row(
+              children: [
+                Icon(
+                  viewModel.icon,
+                  size: iconSize,
+                ),
+                Text(
+                  viewModel.text,
+                  style: viewModel.textColor != null
+                      ? TextStyle(color: viewModel.textColor) // Usar a cor do texto se fornecida
+                      : buttonTextStyle, // Caso contrário, usar o estilo padrão
+                ),
+              ],
+            )
+          : Text(
+              viewModel.text,
+              style: viewModel.textColor != null
+                  ? TextStyle(color: viewModel.textColor)
+                  : buttonTextStyle,
+            ),
     );
   }
 }

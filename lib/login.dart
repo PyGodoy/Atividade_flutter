@@ -108,10 +108,12 @@ class LoginScreen extends StatelessWidget {
             // Botão grande de Register
             ActionButton.instantiate(
               viewModel: ActionButtonViewModel(
-                size: ActionButtonSize.large,
-                style: ActionButtonStyle.primary,
+                size: ActionButtonSize.medium,
+                style: ActionButtonStyle.primary, // Estilo amarelo
                 text: 'Register',
                 onPressed: () {
+                  // Lógica para o botão de Login
+                  // Pode ser uma navegação para outra tela, por exemplo
                   Navigator.pushNamed(context, '/singup');
                 },
               ),

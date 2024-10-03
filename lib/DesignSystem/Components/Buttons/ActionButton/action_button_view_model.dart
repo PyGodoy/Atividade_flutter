@@ -16,14 +16,16 @@ class ActionButtonViewModel {
   final ActionButtonSize size;
   final ActionButtonStyle style;
   final String text;
+  final VoidCallback onPressed;
   final IconData? icon;
-  final Function() onPressed;
+  final Color? textColor; // Novo parâmetro de cor de texto
 
   ActionButtonViewModel({
     required this.size,
     required this.style,
     required this.text,
     required this.onPressed,
-    this.icon
+    this.icon,
+    this.textColor, // Adicione o novo parâmetro no construtor
   });
 }

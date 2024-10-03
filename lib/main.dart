@@ -42,6 +42,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: LoginScreen(
+      //  Para rodar o ProfileScreen necessariamente precisa desses dois parâmetros abaixo:
+      //  bottomTabBarViewModel: bottomTabBarViewModel,
+      //  currentIndex: currentIndex,
       ),
     );
   }
