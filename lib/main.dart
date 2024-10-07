@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreen(
+      home: SignupScreen(
       //  Para rodar o ProfileScreen necessariamente precisa desses dois parâmetros abaixo:
       //  bottomTabBarViewModel: bottomTabBarViewModel,
       //  currentIndex: currentIndex,
