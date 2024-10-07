@@ -26,6 +26,6 @@ class ActionButtonViewModel {
     required this.text,
     required this.onPressed,
     this.icon,
-    this.textColor, // Adicione o novo parâmetro no construtor
+    this.textColor, // Adicionando o novo parâmetro no construtor
   });
 }
