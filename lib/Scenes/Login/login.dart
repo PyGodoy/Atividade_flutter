@@ -5,6 +5,8 @@ import 'package:designsystemsampleapp/DesignSystem/Components/InputField/input_t
 import 'package:designsystemsampleapp/DesignSystem/Components/LinkedLabel/linked_label.dart';
 import 'package:designsystemsampleapp/DesignSystem/Components/LinkedLabel/linked_label_view_model.dart';
 import 'package:designsystemsampleapp/DesignSystem/shared/colors.dart';
+import 'package:designsystemsampleapp/Scenes/Login/login_router.dart';
+import 'package:designsystemsampleapp/Scenes/Login/login_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -82,11 +84,21 @@ class LoginScreen extends StatelessWidget {
                   size: ActionButtonSize.large,
                   style: ActionButtonStyle.primary,
                   text: 'Login',
-                  onPressed: () {
-                    // Lógica para o botão Signup
-                  },
-                ),
-              ),
+                  onPressed: () async {
+                  try {
+                    // ignore: unused_local_variable
+                    Map<String, dynamic> userData = await LoginService.fetchLogin(
+                    emailController.text,
+                    passwordController.text,
+                  );
+                  // ignore: use_build_context_synchronously
+                  LoginPageRouter.goToProfilePage(context, emailController.text);
+                  } catch (e) {
+                    //ERRO
+                    }
+                  }
+                )
+              )
             ),
             
             SizedBox(height: 100),
@@ -114,7 +126,7 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () {
                   // Lógica para o botão de Login
                   // Pode ser uma navegação para outra tela, por exemplo
-                  Navigator.pushNamed(context, '/singup');
+                  LoginPageRouter.goToSignupPage(context);
                 },
               ),
             ),
