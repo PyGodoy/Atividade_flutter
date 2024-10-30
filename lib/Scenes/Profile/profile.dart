@@ -1,3 +1,4 @@
+import 'package:designsystemsampleapp/Scenes/Profile/profile_router.dart';
 import 'package:flutter/material.dart';
 import 'package:designsystemsampleapp/DesignSystem/shared/colors.dart';
 import 'package:designsystemsampleapp/DesignSystem/Components/BottomTabBar/bottom_tab_bar.dart';
@@ -111,6 +112,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               onTap: () {
                 // Lógica para logout
+                ProfilePageRouter.logout(context);
               },
             ),
           ],
