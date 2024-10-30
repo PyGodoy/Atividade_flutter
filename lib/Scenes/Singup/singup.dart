@@ -5,6 +5,7 @@ import 'package:designsystemsampleapp/DesignSystem/Components/InputField/input_t
 import 'package:designsystemsampleapp/DesignSystem/Components/LinkedLabel/linked_label.dart';
 import 'package:designsystemsampleapp/DesignSystem/Components/LinkedLabel/linked_label_view_model.dart';
 import 'package:designsystemsampleapp/DesignSystem/shared/colors.dart';
+import 'package:designsystemsampleapp/Scenes/Singup/singup_router.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -122,6 +123,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: 'Signup',
                   onPressed: () {
                     // Lógica para o botão Signup
+                    SignupPageRouter.login(context);
                   },
                 ),
               ),
@@ -152,7 +154,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 onPressed: () {
                   // Lógica para o botão de Login
                   // Pode ser uma navegação para outra tela, por exemplo
-                  Navigator.pushNamed(context, '/login');
+                  SignupPageRouter.login(context);
                 },
               ),
             ),
