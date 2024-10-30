@@ -1,8 +1,8 @@
 import 'package:designsystemsampleapp/DesignSystem/Components/BottomTabBar/bottom_tab_bar.dart';
 import 'package:designsystemsampleapp/DesignSystem/Components/BottomTabBar/bottom_tab_bar_view_model.dart';
-import 'package:designsystemsampleapp/profile.dart';
-import 'package:designsystemsampleapp/singup.dart';
-import 'package:designsystemsampleapp/login.dart';
+import 'package:designsystemsampleapp/Scenes/Profile/profile.dart';
+import 'package:designsystemsampleapp/Scenes/Singup/singup.dart';
+import 'package:designsystemsampleapp/Scenes/Login/login.dart';
 import 'package:flutter/material.dart';
 import '../DesignSystem/Samples/actionButtonSampleScreen/action_button_sample_screen.dart';
 import '../DesignSystem/Samples/bottomTabBarSampleScreen/bottom_tab_bar_sample_screen.dart';
