@@ -6,11 +6,13 @@ import 'package:designsystemsampleapp/DesignSystem/Components/BottomTabBar/botto
 class ProfileScreen extends StatelessWidget {
   final BottomTabBarViewModel bottomTabBarViewModel;
   final int currentIndex;
+  String userEmail;
 
   ProfileScreen({
     super.key,
     required this.bottomTabBarViewModel,
     required this.currentIndex,
+    required this.userEmail
   });
 
   @override
